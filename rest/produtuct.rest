@@ -1,0 +1,30 @@
+### Criar um novo produto
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "name": "Product 1",
+  "description": "This is the first product",
+  "price": 100.00,
+  "stock": 50
+}
+
+### Obter todos os produtos
+GET http://localhost:3000/api/products
+
+### Obter um produto pelo ID
+GET http://localhost:3000/api/products/1
+
+### Atualizar um produto pelo ID
+PUT http://localhost:3000/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Updated Product",
+  "description": "This is the updated product",
+  "price": 150.00,
+  "stock": 30
+}
+
+### Deletar um produto pelo ID
+DELETE http://localhost:3000/api/products/1

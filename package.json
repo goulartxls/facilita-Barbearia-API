@@ -1,0 +1,26 @@
+{
+  "name": "projetosenai",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "ProjtoTCC",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pablo Raphael",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "email-validator": "^2.0.4",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.5",
+    "salt": "^0.5.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5"
+  }
+}

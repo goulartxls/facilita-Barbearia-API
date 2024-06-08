@@ -1,0 +1,49 @@
+### Criar um novo Employee
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+  "name": "Jane Smith",
+  "email": "jane.smith@example.com",
+  "password": "password123",
+  "role": "employee",
+  "phone_number": "123-456-7890",
+  "schedule": {
+    "monday": "09:00-17:00",
+    "tuesday": "09:00-17:00",
+    "wednesday": "09:00-17:00",
+    "thursday": "09:00-17:00",
+    "friday": "09:00-17:00"
+  }
+}
+
+### Obter todos os Employees
+GET http://localhost:3000/api/employees
+
+### Obter um Employee pelo ID
+# Substitua `1` pelo ID do Employee que você deseja obter
+GET http://localhost:3000/employees/2
+
+### Atualizar um Employee pelo ID
+# Substitua `1` pelo ID do Employee que você deseja atualizar
+PUT http://localhost:3000/employees/2
+Content-Type: application/json
+
+{
+  "name": "John Smith",
+  "email": "john.smith2@example.com",
+  "password": "newpassword123",
+  "role": "employee",
+  "phone_number": "098-765-4321",
+  "schedule": {
+    "monday": "10:00-18:00",
+    "tuesday": "10:00-18:00",
+    "wednesday": "10:00-18:00",
+    "thursday": "10:00-18:00",
+    "friday": "10:00-18:00"
+  }
+}
+
+### Deletar um Employee pelo ID
+# Substitua `1` pelo ID do Employee que você deseja deletar
+DELETE http://localhost:3000/employees/2

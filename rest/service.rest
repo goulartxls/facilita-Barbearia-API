@@ -1,0 +1,28 @@
+### Criar um novo serviço
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+  "name": "Service 1",
+  "description": "This is the first service",
+  "price": 100.00
+}
+
+### Obter todos os serviços
+GET http://localhost:3000/api/services
+
+### Obter um serviço pelo ID
+GET http://localhost:3000/api/services/1
+
+### Atualizar um serviço pelo ID
+PUT http://localhost:3000/api/services/1
+Content-Type: application/json
+
+{
+  "name": "Updated Service",
+  "description": "This is the updated service",
+  "price": 150.00
+}
+
+### Deletar um serviço pelo ID
+DELETE http://localhost:3000/api/services/1

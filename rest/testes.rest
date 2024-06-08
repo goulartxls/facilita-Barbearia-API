@@ -1,0 +1,503 @@
+### Barber Routes
+
+# Create a new barber
+POST http://localhost:3000/api/barbers
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "cpf": "12345678900",
+  "phone": "555-1234",
+  "barber_shop_id": 2
+}
+
+###
+
+# Get all barbers
+GET http://localhost:3000/api/barbers
+
+###
+
+# Get a barber by ID
+GET http://localhost:3000/api/barbers/1
+
+###
+
+# Update a barber
+PUT http://localhost:3000/api/barbers/1
+Content-Type: application/json
+
+{
+  "name": "John Doe Updated",
+  "cpf": "98765432100",
+  "phone": "555-5678"
+}
+
+###
+
+# Delete a barber
+DELETE http://localhost:3000/api/barbers/1
+
+###
+
+# Get barber shop of a barber by ID
+GET http://localhost:3000/api/barbers/2/barber_shop
+
+###
+
+### BarberLogin Routes
+
+# Create a new barber login
+POST http://localhost:3000/api/barber_logins
+Content-Type: application/json
+
+{
+  "username": "johndoe",
+  "password": "password123",
+  "barber_id": 2
+}
+
+###
+
+# Get all barber logins
+GET http://localhost:3000/api/barber_logins
+
+###
+
+# Get a barber login by ID
+GET http://localhost:3000/api/barber_logins/1
+
+###
+
+# Update a barber login
+PUT http://localhost:3000/api/barber_logins/1
+Content-Type: application/json
+
+{
+  "username": "johndoe_updated",
+  "password": "newpassword123",
+  "barber_id": 1
+}
+
+###
+
+# Delete a barber login
+DELETE http://localhost:3000/api/barber_logins/1
+
+###
+
+### BarberShop Routes
+
+# Create a new barber shop
+POST http://localhost:3000/api/barber_shops
+Content-Type: application/json
+
+{
+  "name": "Barber Shop 1",
+  "address": "123 Main St"
+}
+
+###
+
+# Get all barber shops
+GET http://localhost:3000/api/barber_shops
+
+###
+
+# Get a barber shop by ID
+GET http://localhost:3000/api/barber_shops/1
+
+###
+
+# Update a barber shop
+PUT http://localhost:3000/api/barber_shops/1
+Content-Type: application/json
+
+{
+  "name": "Barber Shop 1 Updated",
+  "address": "456 Main St"
+}
+
+###
+
+# Delete a barber shop
+DELETE http://localhost:3000/api/barber_shops/1
+
+###
+
+### Client Routes
+
+# Create a new client
+POST http://localhost:3000/api/clients
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "cpf": "12345678901",
+  "phone": "555-4321"
+}
+
+###
+
+# Get all clients
+GET http://localhost:3000/api/clients
+
+###
+
+# Get a client by ID
+GET http://localhost:3000/api/clients/1
+
+###
+
+# Update a client
+PUT http://localhost:3000/api/clients/1
+Content-Type: application/json
+
+{
+  "name": "Jane Doe Updated",
+  "cpf": "98765432101",
+  "phone": "555-8765"
+}
+
+###
+
+# Delete a client
+DELETE http://localhost:3000/api/clients/1
+
+###
+
+### Order Routes
+
+# Create a new order
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "date": "2023-10-10",
+  "client_id": 1
+}
+
+###
+
+# Get all orders
+GET http://localhost:3000/api/orders
+
+###
+
+# Get an order by ID
+GET http://localhost:3000/api/orders/1
+
+###
+
+# Update an order
+PUT http://localhost:3000/api/orders/1
+Content-Type: application/json
+
+{
+  "date": "2023-10-11",
+  "client_id": 1
+}
+
+###
+
+# Delete an order
+DELETE http://localhost:3000/api/orders/1
+
+###
+
+### OrderProduct Routes
+
+# Create a new order product
+POST http://localhost:3000/api/order_products
+Content-Type: application/json
+
+{
+  "date": "2023-10-10",
+  "client_id": 1,
+  "product_id": 1,
+  "quantity": 2,
+  "price": 20.00
+}
+
+###
+
+# Get all order products
+GET http://localhost:3000/api/order_products
+
+###
+
+# Get an order product by ID
+GET http://localhost:3000/api/order_products/1
+
+###
+
+# Update an order product
+PUT http://localhost:3000/api/order_products/1
+Content-Type: application/json
+
+{
+  "date": "2023-10-11",
+  "client_id": 1,
+  "product_id": 1,
+  "quantity": 3,
+  "price": 30.00
+}
+
+###
+
+# Delete an order product
+DELETE http://localhost:3000/api/order_products/1
+
+###
+
+### OrderService Routes
+
+# Create a new order service
+POST http://localhost:3000/api/order_services
+Content-Type: application/json
+
+{
+  "date": "2023-10-10",
+  "time": "10:00",
+  "client_id": 1,
+  "service_id": 1,
+  "barber_id": 1
+}
+
+###
+
+# Get all order services
+GET http://localhost:3000/api/order_services
+
+###
+
+# Get an order service by ID
+GET http://localhost:3000/api/order_services/1
+
+###
+
+# Update an order service
+PUT http://localhost:3000/api/order_services/1
+Content-Type: application/json
+
+{
+  "date": "2023-10-11",
+  "time": "11:00",
+  "client_id": 1,
+  "service_id": 1,
+  "barber_id": 1
+}
+
+###
+
+# Delete an order service
+DELETE http://localhost:3000/api/order_services/1
+
+###
+
+### Payment Routes
+
+# Create a new payment
+POST http://localhost:3000/api/payments
+Content-Type: application/json
+
+{
+  "order_id": 1,
+  "payment_method_id": 1,
+  "amount": 50.00,
+  "payment_date": "2023-10-10"
+}
+
+###
+
+# Get all payments
+GET http://localhost:3000/api/payments
+
+###
+
+# Get a payment by ID
+GET http://localhost:3000/api/payments/1
+
+###
+
+# Update a payment
+PUT http://localhost:3000/api/payments/1
+Content-Type: application/json
+
+{
+  "order_id": 1,
+  "payment_method_id": 1,
+  "amount": 55.00,
+  "payment_date": "2023-10-11"
+}
+
+###
+
+# Delete a payment
+DELETE http://localhost:3000/api/payments/1
+
+###
+
+### PaymentMethod Routes
+
+# Create a new payment method
+POST http://localhost:3000/api/payment_methods
+Content-Type: application/json
+
+{
+  "name": "Credit Card",
+  "description": "Visa or MasterCard",
+  "taxes": 2.5
+}
+
+###
+
+# Get all payment methods
+GET http://localhost:3000/api/payment_methods
+
+###
+
+# Get a payment method by ID
+GET http://localhost:3000/api/payment_methods/1
+
+###
+
+# Update a payment method
+PUT http://localhost:3000/api/payment_methods/1
+Content-Type: application/json
+
+{
+  "name": "Credit Card Updated",
+  "description": "Visa or MasterCard Updated",
+  "taxes": 3.0
+}
+
+###
+
+# Delete a payment method
+DELETE http://localhost:3000/api/payment_methods/1
+
+###
+
+### Product Routes
+
+# Create a new product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "name": "Shampoo",
+  "description": "Hair shampoo",
+  "price": 10.00
+}
+
+###
+
+# Get all products
+GET http://localhost:3000/api/products
+
+###
+
+# Get a product by ID
+GET http://localhost:3000/api/products/1
+
+###
+
+# Update a product
+PUT http://localhost:3000/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Shampoo Updated",
+  "description": "Hair shampoo updated",
+  "price": 12.00
+}
+
+###
+
+# Delete a product
+DELETE http://localhost:3000/api/products/1
+
+###
+
+### Service Routes
+
+# Create a new service
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+  "name": "Haircut",
+  "description": "Basic haircut",
+  "price": 15.00
+}
+
+###
+
+# Get all services
+GET http://localhost:3000/api/services
+
+###
+
+# Get a service by ID
+GET http://localhost:3000/api/services/1
+
+###
+
+# Update a service
+PUT http://localhost:3000/api/services/1
+Content-Type: application/json
+
+{
+  "name": "Haircut Updated",
+  "description": "Basic haircut updated",
+  "price": 20.00
+}
+
+###
+
+# Delete a service
+DELETE http://localhost:3000/api/services/1
+
+###
+
+### User Routes
+
+# Create a new user
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "janedoe",
+  "password": "password123",
+  "client_id": 1
+}
+
+###
+
+# Get all users
+GET http://localhost:3000/api/users
+
+###
+
+# Get a user by ID
+GET http://localhost:3000/api/users/1
+
+###
+
+# Update a user
+PUT http://localhost:3000/api/users/1
+Content-Type: application/json
+
+{
+  "username": "janedoe_updated",
+  "password": "newpassword123",
+  "client_id": 1
+}
+
+###
+
+# Delete a user
+DELETE http://localhost:3000/api/users/1
+
+###

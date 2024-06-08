@@ -1,0 +1,35 @@
+### Criar um novo Customer
+POST http://localhost:3000/customers
+Content-Type: application/json
+
+{
+  "name": "Pablo Raphael",
+  "email": "pabloraphaelag@gmail.com",
+  "password": "password123",
+  "role": "customer",
+  "phone_number": "+5541995946564"
+}
+
+### Obter todos os Customers
+GET http://localhost:3000/api/customers
+
+### Obter um Customer pelo ID
+# Substitua `1` pelo ID do Customer que você deseja obter
+GET http://localhost:3000/customers/3
+
+### Atualizar um Customer pelo ID
+# Substitua `1` pelo ID do Customer que você deseja atualizar
+PUT http://localhost:3000/customers/3
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "jane.doe@example.com",
+  "password": "newpassword123",
+  "role": "customer",
+  "phone_number": "098-765-4321"
+}
+
+### Deletar um Customer pelo ID
+# Substitua `1` pelo ID do Customer que você deseja deletar
+DELETE http://localhost:3000/customers/2

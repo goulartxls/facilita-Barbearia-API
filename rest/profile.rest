@@ -1,0 +1,33 @@
+### Criar um novo perfil
+POST http://localhost:3000/api/profiles
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "password123",
+  "role": "user"
+}
+
+### Obter todos os perfis
+GET http://localhost:3000/api/profiles
+
+### Obter um perfil pelo ID
+# Substitua `1` pelo ID do perfil que você deseja obter
+GET http://localhost:3000/profiles/11
+
+### Atualizar um perfil pelo ID
+# Substitua `1` pelo ID do perfil que você deseja atualizar
+PUT http://localhost:3000/api/profiles/1
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "jane.doe@example.com",
+  "password": "newpassword456",
+  "role": "admin"
+}
+
+### Deletar um perfil pelo ID
+# Substitua `1` pelo ID do perfil que você deseja deletar
+DELETE http://localhost:3000/api/profiles/1

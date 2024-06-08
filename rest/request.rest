@@ -1,0 +1,40 @@
+POST http://localhost:3000/customers
+Content-Type: application/json
+
+{
+    "name": "PABLO ArAUjo goulart",
+    "email": "pabloraphael@gmail.com",
+    "password": "99999999999",
+    "role" : "Cliente",
+    "phone_number": "41995946564"
+}
+###
+GET http://localhost:3000/profile
+###
+GET http://localhost:3000/customers
+###
+POST http://localhost:3000/perfil/alter/name
+Content-Type: application/json
+
+{
+    "id" : 9,
+    "name": "Pedro"
+}
+###
+POST http://localhost:3000/perfil/alter/email
+Content-Type: application/json
+
+{
+    "id" : 9,
+    "email": "pabloraphaelag@gmail.com"
+}
+###
+POST http://localhost:3000/clientes/teste
+Content-Type: application/json
+
+{
+    "nome": "PEdro raphael",
+    "email": "rafa@gmail.com",
+    "telefone": "99999999999",
+    "senha" : "Dsdssd1234"
+}

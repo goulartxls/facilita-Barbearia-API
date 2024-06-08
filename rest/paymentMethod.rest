@@ -1,0 +1,33 @@
+### Criar um novo método de pagamento
+POST http://localhost:3000/payment-methods
+Content-Type: application/json
+
+{
+  "name": "Credit Card",
+  "description": "Payment using credit card",
+  "fee": 2.50,
+  "type": "Card"
+}
+
+### Obter todos os métodos de pagamento
+GET http://localhost:3000/payment-methods
+
+### Obter um método de pagamento pelo ID
+# Substitua `1` pelo ID do método de pagamento que você deseja obter
+GET http://localhost:3000/payment-methods/1
+
+### Atualizar um método de pagamento pelo ID
+# Substitua `1` pelo ID do método de pagamento que você deseja atualizar
+PUT http://localhost:3000/payment-methods/1
+Content-Type: application/json
+
+{
+  "name": "Debit Card",
+  "description": "Payment using debit card",
+  "fee": 1.50,
+  "type": "Card"
+}
+
+### Deletar um método de pagamento pelo ID
+# Substitua `1` pelo ID do método de pagamento que você deseja deletar
+DELETE http://localhost:3000/payment-methods/2

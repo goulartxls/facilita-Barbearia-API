@@ -1,0 +1,58 @@
+### Get all orders
+GET http://localhost:3000/api/orders
+Accept: application/json
+
+###
+
+### Get order by ID
+GET http://localhost:3000/api/orders/5
+Accept: application/json
+### Create a new order
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "customer_id": 5,
+  "items": [
+    { "type": "product", "item_reference_id": 1, "quantity": 2 },
+    { "type": "service", "item_reference_id": 2, "quantity": 1 }
+  ],
+  "is_paid": false
+}
+
+### Create a new order
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "customer_id": 1,
+  "items": [
+    { "type": "product", "item_reference_id": 1, "quantity": 2 },
+    { "type": "service", "item_reference_id": 2, "quantity": 1 }
+  ],
+  "is_paid": false
+}
+
+###
+
+### Update an order
+PUT http://localhost:3000/api/orders/1
+Content-Type: application/json
+
+{
+  "customer_id": 1,
+  "professional_id": 2,
+  "items": [
+    { "type": "product", "id": 1, "quantity": 3 },
+    { "type": "service", "id": 2, "quantity": 2 }
+  ],
+  "is_paid": true
+}
+
+###
+
+### Delete an order
+DELETE http://localhost:3000/api/orders/1
+Accept: application/json
+
+###
